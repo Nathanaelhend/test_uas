@@ -21,7 +21,7 @@ class DetailViewModel(application: Application) : AndroidViewModel(application) 
     fun fetch(kostId : String) {
 
         queue = Volley.newRequestQueue(getApplication())
-        val url = "https://ubaya.fun/hybrid/160419034/160419034_JSON/kost.php?id=$kostId"
+        val url = "https://ubaya.fun/hybrid/160419034/160419034_ANMP/kost.php?id=$kostId"
 
         val stringRequest = StringRequest(
             Request.Method.GET,url,
@@ -42,7 +42,7 @@ class DetailViewModel(application: Application) : AndroidViewModel(application) 
     fun fetchMessage(messageId : String) {
 
         queue = Volley.newRequestQueue(getApplication())
-        val url = "https://ubaya.fun/hybrid/160419034/160419034_JSON/message.php?id=$messageId"
+        val url = "https://ubaya.fun/hybrid/160419034/160419034_ANMP/message.php?id=$messageId"
 
         val stringRequest = StringRequest(
             Request.Method.GET,url,
