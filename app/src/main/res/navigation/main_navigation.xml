@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.example.a160419034_ubayakost.view.KostListFragment"
+        android:label="fragment_kost_list"
+        tools:layout="@layout/fragment_kost_list" >
+        <action
+            android:id="@+id/actionKostDetail"
+            app:destination="@id/kostDetailFragment" />
+        <action
+            android:id="@+id/actionToAddKost"
+            app:destination="@id/addKostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kostDetailFragment"
+        android:name="com.example.a160419034_ubayakost.view.KostDetailFragment"
+        android:label="fragment_kost_detail"
+        tools:layout="@layout/fragment_kost_detail" >
+        <argument
+            android:name="kostId"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionToFavorite"
+            app:destination="@id/itemFavorite" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.example.a160419034_ubayakost.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/itemMessage"
+        android:name="com.example.a160419034_ubayakost.view.MessageListFragment"
+        android:label="fragment_message_list"
+        tools:layout="@layout/fragment_message_list" >
+        <action
+            android:id="@+id/actionToMessageDetail"
+            app:destination="@id/messageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageDetailFragment"
+        android:name="com.example.a160419034_ubayakost.view.MessageDetailFragment"
+        android:label="fragment_message_detail"
+        tools:layout="@layout/fragment_message_detail" >
+        <argument
+            android:name="messageId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFavorite"
+        android:name="com.example.a160419034_ubayakost.view.FavoriteListFragment"
+        android:label="fragment_favorite_list"
+        tools:layout="@layout/fragment_favorite_list" />
+    <fragment
+        android:id="@+id/addKostFragment"
+        android:name="com.example.a160419034_ubayakost.view.AddKostFragment"
+        android:label="AddKostFragment" >
+        <action
+            android:id="@+id/actionToKostList"
+            app:destination="@id/itemHome"
+            app:popUpTo="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemVoucher"
+        android:name="com.example.a160419034_ubayakost.view.VoucherFragment"
+        android:label="fragment_voucher"
+        tools:layout="@layout/fragment_voucher" />
+</navigation>
