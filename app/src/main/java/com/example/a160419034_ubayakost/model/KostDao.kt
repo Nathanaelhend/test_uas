@@ -2,6 +2,7 @@ package com.example.a160419034_ubayakost.model
 
 import androidx.room.*
 
+@Dao
 interface KostDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(vararg kost: Kost)

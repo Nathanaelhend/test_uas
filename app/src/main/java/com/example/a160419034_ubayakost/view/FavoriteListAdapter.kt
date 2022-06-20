@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.a160419034_ubayakost.R
 import com.example.a160419034_ubayakost.model.Favorite
 import com.example.a160419034_ubayakost.model.Kost
-import com.example.a160419034_ubayakost.util.loadImage
 import kotlinx.android.synthetic.main.favorite_list_item.view.*
 import kotlinx.android.synthetic.main.kost_list_item.view.*
 
@@ -31,7 +30,7 @@ class FavoriteListAdapter(val favoriteList:ArrayList<Favorite>):RecyclerView
             textRatingFavorit.text = favorite.rating
             txtHargaFavorit.text = favorite.harga
 
-            imagePhotoFavorit.loadImage(favorite.photo, progressLoadingFavorit)
+//            imagePhotoFavorit.loadImage(favorite.photo, progressLoadingFavorit)
         }
     }
 

@@ -26,7 +26,7 @@ class MessageListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
-        viewModel.MessageRefresh()
+//        viewModel.MessageRefresh()
 
         recViewVoucher.layoutManager = LinearLayoutManager(context)
         recViewVoucher.adapter = messageListAdapter
@@ -43,9 +43,9 @@ class MessageListFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-        viewModel.MessageLiveData.observe(viewLifecycleOwner){
-            messageListAdapter.updateMessageList(it)
-        }
+//        viewModel.MessageLiveData.observe(viewLifecycleOwner){
+//            messageListAdapter.updateMessageList(it)
+//        }
         viewModel.LoadErrorLiveData.observe(viewLifecycleOwner){
             textError.visibility = if(it) View.VISIBLE else View.GONE
         }

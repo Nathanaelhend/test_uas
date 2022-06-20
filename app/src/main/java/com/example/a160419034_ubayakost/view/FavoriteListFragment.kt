@@ -29,7 +29,7 @@ class FavoriteListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
-        viewModel.favoriteRefresh()
+//        viewModel.favoriteRefresh()
 
         recViewFavorite.layoutManager = LinearLayoutManager(context)
         recViewFavorite.adapter = favoriteListAdapter
@@ -38,7 +38,7 @@ class FavoriteListFragment : Fragment() {
             recViewFavorite.visibility = View.GONE
 
             progressBarLoad.visibility = View.VISIBLE
-            viewModel.favoriteRefresh()
+//            viewModel.favoriteRefresh()
             refreshLayoutVoucher.isRefreshing = false
             txtErrorFavorite.visibility= View.GONE
         }
@@ -46,9 +46,9 @@ class FavoriteListFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-        viewModel.FavoriteLiveData.observe(viewLifecycleOwner){
-            favoriteListAdapter.updateFavoriteList(it)
-        }
+//        viewModel.FavoriteLiveData.observe(viewLifecycleOwner){
+//            favoriteListAdapter.updateFavoriteList(it)
+//        }
         viewModel.LoadErrorLiveData.observe(viewLifecycleOwner){
             txtErrorFavorite.visibility = if(it) View.VISIBLE else View.GONE
         }

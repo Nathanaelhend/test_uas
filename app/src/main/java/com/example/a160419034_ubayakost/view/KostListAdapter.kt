@@ -8,7 +8,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a160419034_ubayakost.R
 import com.example.a160419034_ubayakost.model.Kost
-import com.example.a160419034_ubayakost.util.loadImage
+//import com.example.a160419034_ubayakost.util.loadImage
 import kotlinx.android.synthetic.main.fragment_kost_list.view.*
 import kotlinx.android.synthetic.main.kost_list_item.view.*
 
@@ -33,10 +33,10 @@ class KostListAdapter(val kostList: ArrayList<Kost>) : RecyclerView
             textRating.text = kost.rating
             txtHarga.text = kost.harga
             buttonDetail.setOnClickListener {
-                val action = KostListFragmentDirections.actionKostDetail(kost.id.toString())
+                val action = KostListFragmentDirections.actionKostDetail(kost.uuid.toString())
                 Navigation.findNavController(it).navigate(action)
             }
-            imageKostPhoto.loadImage(kost.photo, progressLoadingPhoto)
+//            imageKostPhoto.loadImage(kost.photo, progressLoadingPhoto)
         }
 
     }

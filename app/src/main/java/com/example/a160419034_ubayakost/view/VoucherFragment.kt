@@ -29,7 +29,7 @@ class VoucherFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
-        viewModel.showVoucher()
+//        viewModel.showVoucher()
 
         recViewVoucher.layoutManager = LinearLayoutManager(context)
         recViewVoucher.adapter = voucherListAdapter
@@ -38,7 +38,7 @@ class VoucherFragment : Fragment() {
             recViewVoucher.visibility = View.GONE
 
             progressVoucher.visibility = View.VISIBLE
-            viewModel.showVoucher()
+//            viewModel.showVoucher()
             refreshLayoutVoucher.isRefreshing = false
             txtErrorVoucher.visibility= View.GONE
         }
@@ -47,9 +47,9 @@ class VoucherFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-        viewModel.VoucherLiveData.observe(viewLifecycleOwner){
-            voucherListAdapter.updateVoucherList(it)
-        }
+//        viewModel.VoucherLiveData.observe(viewLifecycleOwner){
+//            voucherListAdapter.updateVoucherList(it)
+//        }
         viewModel.LoadErrorLiveData.observe(viewLifecycleOwner){
             txtErrorVoucher.visibility = if(it) View.VISIBLE else View.GONE
         }

@@ -1,9 +1,10 @@
 package com.example.a160419034_ubayakost.model
 
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-
+@Entity
 data class Kost(
     @SerializedName("nama")
     var nama:String?,

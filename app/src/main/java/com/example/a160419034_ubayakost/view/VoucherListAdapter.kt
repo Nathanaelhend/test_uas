@@ -7,7 +7,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a160419034_ubayakost.R
 import com.example.a160419034_ubayakost.model.Voucher
-import com.example.a160419034_ubayakost.util.loadImage
+//import com.example.a160419034_ubayakost.util.loadImage
 import kotlinx.android.synthetic.main.voucher_list_item.view.*
 
 class VoucherListAdapter(val voucherList: ArrayList<Voucher>) : RecyclerView
@@ -26,7 +26,7 @@ class VoucherListAdapter(val voucherList: ArrayList<Voucher>) : RecyclerView
             txtJudulVoucher.text = voucher.judul
             txtDescVoucher.text = voucher.description
             txtExpDate.text = "Exp Date : ${voucher.expDate}"
-            imageVoucher.loadImage(voucher.photo, progressImageVoucher)
+//            imageVoucher.loadImage(voucher.photo, progressImageVoucher)
         }
     }
 

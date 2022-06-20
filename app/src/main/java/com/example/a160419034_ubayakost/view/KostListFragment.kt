@@ -50,9 +50,9 @@ class KostListFragment : Fragment() {
 
 
     private fun observeViewModel() {
-        viewModel.KostLiveData.observe(viewLifecycleOwner){
-            kostListAdapter.updateKostList(it)
-        }
+//        viewModel.KostLiveData.observe(viewLifecycleOwner){
+//            kostListAdapter.updateKostList(it)
+//        }
         viewModel.LoadErrorLiveData.observe(viewLifecycleOwner){
             txtErrorVoucher.visibility = if(it) View.VISIBLE else View.GONE
         }
