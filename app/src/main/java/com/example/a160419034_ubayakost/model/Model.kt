@@ -1,10 +1,10 @@
 package com.example.a160419034_ubayakost.model
 
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 
 data class Kost(
-    var id:String?,
     @SerializedName("nama")
     var nama:String?,
     var jenis:String?,
@@ -16,7 +16,12 @@ data class Kost(
     var harga:String?,
     var address: String?,
     @SerializedName("photo")
-    var photo:String?)
+    var photo:String?
+)
+{
+    @PrimaryKey(autoGenerate = true)
+    var uuid: Int = 0
+}
 
 data class Pesan(
     var id:String?,
