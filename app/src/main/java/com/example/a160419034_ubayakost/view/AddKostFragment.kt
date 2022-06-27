@@ -8,12 +8,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.workDataOf
 import com.example.a160419034_ubayakost.R
 import com.example.a160419034_ubayakost.databinding.FragmentAddKostBinding
 import com.example.a160419034_ubayakost.model.Kost
 import com.example.a160419034_ubayakost.viewmodel.DetailViewModel
 import com.example.a160419034_ubayakost.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_add_kost.*
+import java.util.concurrent.TimeUnit
 
 class AddKostFragment : Fragment(), KostAddClickListener{
 private lateinit var viewModel: DetailViewModel
@@ -37,9 +41,9 @@ private lateinit var dataBinding: FragmentAddKostBinding
         dataBinding.kost?.let {
             val list = listOf(it)
             viewModel.addKost(list)
+
             Toast.makeText(v.context, "Data Added", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(v).popBackStack()
         }
     }
-
 }

@@ -50,7 +50,7 @@ class KostListFragment : Fragment() {
 
 
     private fun observeViewModel() {
-//        viewModel.KostLiveData.observe(viewLifecycleOwner){
+//        viewModel.KostLD.observe(viewLifecycleOwner){
 //            kostListAdapter.updateKostList(it)
 //        }
         viewModel.LoadErrorLiveData.observe(viewLifecycleOwner){

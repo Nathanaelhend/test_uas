@@ -12,7 +12,7 @@ data class Kost(
     @SerializedName("rating")
     var rating:String?,
     var wilayah:String?,
-    var desc:String?,
+    var descr: String?,
     var phone:String?,
     var harga:String?,
     var address: String?,

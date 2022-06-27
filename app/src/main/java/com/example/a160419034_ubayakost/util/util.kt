@@ -13,7 +13,7 @@ import java.lang.Exception
 val DB_NAME = "newkostdb"
 
 fun buildDb(context: Context) = Room.databaseBuilder(context, KostDatabase::class.java, DB_NAME)
-    .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
+    .addMigrations(MIGRATION_1_2, MIGRATION_1_3)
     .build()
 
 val MIGRATION_1_2 = object : Migration(1, 2) {
@@ -23,7 +23,7 @@ val MIGRATION_1_2 = object : Migration(1, 2) {
         )
     }
 }
-val MIGRATION_2_3 = object : Migration(2, 3) {
+val MIGRATION_1_3 = object : Migration(2, 3) {
     override fun migrate(database: SupportSQLiteDatabase) {
         database.execSQL("ALTER TABLE kost ADD COLUMN jenis STRING DEFAULT NULL")
     }

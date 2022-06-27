@@ -60,12 +60,7 @@
     <fragment
         android:id="@+id/addKostFragment"
         android:name="com.example.a160419034_ubayakost.view.AddKostFragment"
-        android:label="AddKostFragment" >
-        <action
-            android:id="@+id/actionToKostList"
-            app:destination="@id/itemHome"
-            app:popUpTo="@id/itemHome" />
-    </fragment>
+        android:label="AddKostFragment" />
     <fragment
         android:id="@+id/itemVoucher"
         android:name="com.example.a160419034_ubayakost.view.VoucherFragment"
